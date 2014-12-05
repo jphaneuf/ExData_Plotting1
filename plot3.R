@@ -1,3 +1,6 @@
+#NOTE:  I added units to y-axis even though reference plot doesn't have them.
+#This is a matter of principle.
+
 #Set working directory to script's directory
 script.dir <- dirname(sys.frame(1)$ofile)
 setwd(script.dir)
@@ -8,7 +11,7 @@ epcSub$Sub_metering_1 <- as.numeric(gsub(" ","",epcSub$Sub_metering_1))
 epcSub$Sub_metering_2 <- as.numeric(gsub(" ","",epcSub$Sub_metering_2))
 epcSub$Sub_metering_3 <- as.numeric(gsub(" ","",epcSub$Sub_metering_3))
 #make plots
-plot(epcSub$Sub_metering_1,pch=27,main="Global Active Power",xlab="",ylab="Energy sub metering (WH)",axes=FALSE)
+plot(epcSub$Sub_metering_1,pch=27,xlab="",ylab="Energy sub metering (WH)",axes=FALSE)
 lines(epcSub$Sub_metering_1,lwd=1,col="black")
 lines(epcSub$Sub_metering_2,lwd=1,col="red")
 lines(epcSub$Sub_metering_3,lwd=1,col="darkorchid3") #Can't get that purple quite right...

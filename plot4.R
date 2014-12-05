@@ -1,3 +1,6 @@
+#NOTE:  I added units to y-axis even though reference plot doesn't have them.
+#This is a matter of principle.
+
 #Set working directory to script's directory
 script.dir <- dirname(sys.frame(1)$ofile)
 setwd(script.dir)
@@ -13,7 +16,7 @@ epcSub$Global_reactive_power <- as.numeric(gsub(" ","",epcSub$Global_reactive_po
 ticks = c(1,nrow(epcSub)/2,nrow(epcSub))
 xlabels = c("Thu","Fri","Sat")
 par(mfrow=c(2,2))
-par(cex=.5)
+par(cex=.6) #adjust text sizing, global
 #Top Left
 plot(epcSub$Global_active_power,type="l",xlab="",ylab="Global Active Power (kW)",axes=FALSE)
 axis(2)
@@ -40,6 +43,7 @@ axis(1,at=ticks,labels=xlabels)
 box(lty="solid")
 
 par(mfrow=c(1,1)) #this is a global setting :)
+par(cex=1)#undo
 
 #write png 480x480
 dev.copy(png,"plot4.png") #480x480 default device size
