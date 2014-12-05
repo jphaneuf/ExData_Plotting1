@@ -1,3 +1,8 @@
+##Use of scripts
+The scripts in this directory will load, from their own directory only, the file
+"household_power_consumption.txt".
+Please download and unzip the file described below.
+
 ## Introduction
 
 This assignment uses data from
