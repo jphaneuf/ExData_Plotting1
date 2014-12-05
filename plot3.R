@@ -14,8 +14,8 @@ epcSub$Sub_metering_3 <- as.numeric(gsub(" ","",epcSub$Sub_metering_3))
 plot(epcSub$Sub_metering_1,pch=27,xlab="",ylab="Energy sub metering (WH)",axes=FALSE)
 lines(epcSub$Sub_metering_1,lwd=1,col="black")
 lines(epcSub$Sub_metering_2,lwd=1,col="red")
-lines(epcSub$Sub_metering_3,lwd=1,col="darkorchid3") #Can't get that purple quite right...
-legend("topright",cex=.7,lty="solid",col=c("black","red","darkorchid3"),legend=names(epcSub[,7:9]))
+lines(epcSub$Sub_metering_3,lwd=1,col="blue") #Can't get that purple quite right...
+legend("topright",cex=.7,lty="solid",col=c("black","red","blue"),legend=names(epcSub[,7:9]))
 axis(2)
 ticks = c(1,nrow(epcSub)/2,nrow(epcSub))
 xlabels = c("Thu","Fri","Sat")
